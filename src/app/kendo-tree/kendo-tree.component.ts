@@ -1,15 +1,20 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { Observable } from 'rxjs';
+import { TreeDataService } from '../tree-data.service';
 
 @Component({
   selector: 'app-kendo-tree',
   templateUrl: './kendo-tree.component.html',
-  styleUrls: ['./kendo-tree.component.css']
+  styleUrls: ['./kendo-tree.component.css'],
 })
-export class KendoTreeComponent implements OnInit {
+export class KendoTreeComponent {
 
-  constructor() { }
+  data = this.service.getItems();
 
-  ngOnInit(): void {
-  }
+  constructor(private service: TreeDataService) {}
+
+  fetchChildren = (node: any): Observable<any[]> => this.service.getItems();
+
+  hasChildren = (node: any): boolean => true;
 
 }
