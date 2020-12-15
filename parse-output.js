@@ -6,5 +6,5 @@ const output = fs.readFileSync('./output.txt', 'utf8');
 
 const json = JSON.parse(output.substring(output.indexOf('>>> START JSON') + 14, output.indexOf('>>> END JSON')));
 
-fs.writeFileSync('src/assets/data.json', JSON.stringify(json), {flag: 'w+', encoding: 'utf8'});
-fs.writeFileSync('dist/h5-tree-compare/assets/data.json', JSON.stringify(json), {flag: 'w+', encoding: 'utf8'});
+fs.writeFileSync('src/assets/data.json', JSON.stringify(json), {flag: 'w', encoding: 'utf8'});
+fs.writeFileSync('dist/h5-tree-compare/assets/data.json', JSON.stringify(json), {flag: 'w', encoding: 'utf8'});

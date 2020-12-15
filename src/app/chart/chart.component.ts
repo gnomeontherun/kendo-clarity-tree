@@ -13,12 +13,17 @@ export class ChartComponent {
 
   constructor(private http: HttpClient) { }
 
+  kendoExpand = [];
+  kendoCreate = [];
+  clarityExpand = [];
+  clarityCreate = [];
+
   ngOnInit() {
     this.http.get(environment.dataUrl).subscribe((results: any[]) => {
-      const kendoCreate = [];
-      const clarityCreate = [];
-      const kendoExpand = [];
-      const clarityExpand = [];
+      let kendoCreate = [];
+      let clarityCreate = [];
+      let kendoExpand = [];
+      let clarityExpand = [];
       results.forEach(result => {
         result.count = parseInt(result.count);
         if (result.type === 'Clarity') {
@@ -35,29 +40,32 @@ export class ChartComponent {
           }
         }
       });
-      console.log(kendoCreate, kendoExpand, clarityExpand, clarityCreate);
-      console.log(kendoCreate.map(value => value.time))
+
+      this.kendoCreate = kendoCreate = kendoCreate.sort((a, b) => a.count - b.count).map(value => value.time);
+      this.kendoExpand = kendoExpand = kendoExpand.sort((a, b) => a.count - b.count).map(value => value.time);
+      this.clarityCreate = clarityCreate = clarityCreate.sort((a, b) => a.count - b.count).map(value => value.time);
+      this.clarityExpand = clarityExpand = clarityExpand.sort((a, b) => a.count - b.count).map(value => value.time);
 
       this.chartOptions.series = [
       {
         name: 'Kendo Create',
         type: 'line',
-        data: kendoCreate.sort((a, b) => a.count - b.count).map(value => value.time)
+        data: kendoCreate
       },
       {
         name: 'Kendo Expand',
         type: 'line',
-        data: kendoExpand.sort((a, b) => a.count - b.count).map(value => value.time)
+        data: kendoExpand
       },
       {
         name: 'Clarity Create',
         type: 'line',
-        data: clarityCreate.sort((a, b) => a.count - b.count).map(value => value.time)
+        data: clarityCreate
       },
       {
         name: 'Clarity Expand',
         type: 'line',
-        data: clarityExpand.sort((a, b) => a.count - b.count).map(value => value.time)
+        data: clarityExpand
       },
     ]
     });

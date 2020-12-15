@@ -1,1 +1,114 @@
-[{"test":"KendoTreeComponent 3000 should be created and expand","type":"Kendo","time":2446,"expand":true,"count":"3000"},{"test":"KendoTreeComponent 3000 should created","type":"Kendo","time":1142,"expand":false,"count":"3000"},{"test":"KendoTreeComponent 1000 should created","type":"Kendo","time":269,"expand":false,"count":"1000"},{"test":"KendoTreeComponent 1000 should be created and expand","type":"Kendo","time":497,"expand":true,"count":"1000"},{"test":"ClarityTreeComponent 3000 should be created and expand","type":"Clarity","time":3069,"expand":true,"count":"3000"},{"test":"ClarityTreeComponent 3000 should be created","type":"Clarity","time":1387,"expand":false,"count":"3000"},{"test":"ClarityTreeComponent 1000 should be created","type":"Clarity","time":476,"expand":false,"count":"1000"},{"test":"ClarityTreeComponent 1000 should be created and expand","type":"Clarity","time":770,"expand":true,"count":"1000"},{"test":"KendoTreeComponent 10000 should be created and expand","type":"Kendo","time":0,"expand":true,"count":"10000"},{"test":"KendoTreeComponent 10000 should created","type":"Kendo","time":0,"expand":false,"count":"10000"},{"test":"ClarityTreeComponent 5000 should be created","type":"Clarity","time":0,"expand":false,"count":"5000"},{"test":"ClarityTreeComponent 5000 should be created and expand","type":"Clarity","time":0,"expand":true,"count":"5000"},{"test":"KendoTreeComponent 5000 should be created and expand","type":"Kendo","time":0,"expand":true,"count":"5000"},{"test":"KendoTreeComponent 5000 should created","type":"Kendo","time":0,"expand":false,"count":"5000"},{"test":"ClarityTreeComponent 10000 should be created","type":"Clarity","time":0,"expand":false,"count":"10000"},{"test":"ClarityTreeComponent 10000 should be created and expand","type":"Clarity","time":0,"expand":true,"count":"10000"}]
+[
+  {
+    "test": "KendoTreeComponent 10000 should created",
+    "type": "Kendo",
+    "time": 4020,
+    "expand": false,
+    "count": 10000
+  },
+  {
+    "test": "KendoTreeComponent 10000 should be created and expand",
+    "type": "Kendo",
+    "time": 4221,
+    "expand": true,
+    "count": 10000
+  },
+  {
+    "test": "KendoTreeComponent 1000 should created",
+    "type": "Kendo",
+    "time": 337,
+    "expand": false,
+    "count": 1000
+  },
+  {
+    "test": "KendoTreeComponent 1000 should be created and expand",
+    "type": "Kendo",
+    "time": 248,
+    "expand": true,
+    "count": 1000
+  },
+  {
+    "test": "KendoTreeComponent 5000 should be created and expand",
+    "type": "Kendo",
+    "time": 1762,
+    "expand": true,
+    "count": 5000
+  },
+  {
+    "test": "KendoTreeComponent 5000 should created",
+    "type": "Kendo",
+    "time": 1567,
+    "expand": false,
+    "count": 5000
+  },
+  {
+    "test": "ClarityTreeComponent 10000 should be created",
+    "type": "Clarity",
+    "time": 5943,
+    "expand": false,
+    "count": 10000
+  },
+  {
+    "test": "ClarityTreeComponent 10000 should be created and expand",
+    "type": "Clarity",
+    "time": 11394,
+    "expand": true,
+    "count": 10000
+  },
+  {
+    "test": "KendoTreeComponent 3000 should be created and expand",
+    "type": "Kendo",
+    "time": 1187,
+    "expand": true,
+    "count": 3000
+  },
+  {
+    "test": "KendoTreeComponent 3000 should created",
+    "type": "Kendo",
+    "time": 934,
+    "expand": false,
+    "count": 3000
+  },
+  {
+    "test": "ClarityTreeComponent 5000 should be created",
+    "type": "Clarity",
+    "time": 2651,
+    "expand": false,
+    "count": 5000
+  },
+  {
+    "test": "ClarityTreeComponent 5000 should be created and expand",
+    "type": "Clarity",
+    "time": 4514,
+    "expand": true,
+    "count": 5000
+  },
+  {
+    "test": "ClarityTreeComponent 1000 should be created and expand",
+    "type": "Clarity",
+    "time": 827,
+    "expand": true,
+    "count": 1000
+  },
+  {
+    "test": "ClarityTreeComponent 1000 should be created",
+    "type": "Clarity",
+    "time": 359,
+    "expand": false,
+    "count": 1000
+  },
+  {
+    "test": "ClarityTreeComponent 3000 should be created",
+    "type": "Clarity",
+    "time": 1155,
+    "expand": false,
+    "count": 3000
+  },
+  {
+    "test": "ClarityTreeComponent 3000 should be created and expand",
+    "type": "Clarity",
+    "time": 2393,
+    "expand": true,
+    "count": 3000
+  }
+]
