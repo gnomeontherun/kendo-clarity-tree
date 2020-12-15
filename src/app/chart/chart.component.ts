@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
+import { environment } from '../../environments/environment';
 
 import * as Highcharts from 'highcharts';
 
@@ -13,7 +14,7 @@ export class ChartComponent {
   constructor(private http: HttpClient) { }
 
   ngOnInit() {
-    this.http.get('/assets/data.json').subscribe((results: any[]) => {
+    this.http.get(environment.dataUrl).subscribe((results: any[]) => {
       const kendoCreate = [];
       const clarityCreate = [];
       const kendoExpand = [];
