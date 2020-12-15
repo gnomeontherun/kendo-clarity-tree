@@ -1,6 +1,6 @@
 <h1>Clarity Tree</h1>
 
-<clr-tree [clrLazy]="true" [@.disabled]="false">
+<clr-tree [clrLazy]="true" [@.disabled]="true">
   <clr-tree-node 
     *clrRecursiveFor="let item of data | async; getChildren: fetchChildren" 
     [clrExpanded]="item.id === 1 && expand === true"
