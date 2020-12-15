@@ -65,7 +65,7 @@ describe('KendoTreeComponent 3000', () => {
   });
 });
 
-xdescribe('KendoTreeComponent 5000', () => {
+describe('KendoTreeComponent 5000', () => {
   let component: KendoTreeComponent;
   let fixture: ComponentFixture<KendoTreeComponent>;
 
@@ -95,7 +95,7 @@ xdescribe('KendoTreeComponent 5000', () => {
   });
 });
 
-xdescribe('KendoTreeComponent 10000', () => {
+describe('KendoTreeComponent 10000', () => {
   let component: KendoTreeComponent;
   let fixture: ComponentFixture<KendoTreeComponent>;
 

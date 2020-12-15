@@ -65,7 +65,7 @@ describe('ClarityTreeComponent 3000', () => {
   });
 });
 
-xdescribe('ClarityTreeComponent 5000', () => {
+describe('ClarityTreeComponent 5000', () => {
   let component: ClarityTreeComponent;
   let fixture: ComponentFixture<ClarityTreeComponent>;
 
@@ -95,7 +95,7 @@ xdescribe('ClarityTreeComponent 5000', () => {
   });
 });
 
-xdescribe('ClarityTreeComponent 10000', () => {
+describe('ClarityTreeComponent 10000', () => {
   let component: ClarityTreeComponent;
   let fixture: ComponentFixture<ClarityTreeComponent>;
 

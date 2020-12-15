@@ -12,7 +12,7 @@ jobs:
     - run: npm install
     - run: npm test -- --watch false > output.txt
     - run: npm run build
-    - run: npm test
+    - run: node parse-output
       env:
         CI: true
     - name: Deploy
