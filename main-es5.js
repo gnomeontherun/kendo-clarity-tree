@@ -514,7 +514,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         value: function ngOnInit() {
           var _this = this;
 
-          this.http.get('/assets/data.json').subscribe(function (results) {
+          this.http.get('assets/data.json').subscribe(function (results) {
             var kendoCreate = [];
             var clarityCreate = [];
             var kendoExpand = [];

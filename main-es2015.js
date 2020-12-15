@@ -276,7 +276,7 @@ class ChartComponent {
         this.runOutsideAngular = false; // optional boolean, defaults to false
     }
     ngOnInit() {
-        this.http.get('/assets/data.json').subscribe((results) => {
+        this.http.get('assets/data.json').subscribe((results) => {
             const kendoCreate = [];
             const clarityCreate = [];
             const kendoExpand = [];
