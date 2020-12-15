@@ -3,7 +3,8 @@
 <kendo-treeview
   kendoTreeViewExpandable
   [nodes]="data | async"
-  textField="text"
+  textField="text"  
+  [isExpanded]="isExpanded"
   [children]="fetchChildren"
   [hasChildren]="hasChildren"
 ></kendo-treeview>

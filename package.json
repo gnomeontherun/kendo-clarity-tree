@@ -28,6 +28,8 @@
     "@progress/kendo-angular-treeview": "^4.3.2",
     "@progress/kendo-theme-default": "latest",
     "@webcomponents/webcomponentsjs": "^2.0.0",
+    "highcharts": "^8.2.2",
+    "highcharts-angular": "^2.8.2",
     "rxjs": "~6.5.4",
     "tslib": "^1.10.0",
     "zone.js": "~0.10.2"

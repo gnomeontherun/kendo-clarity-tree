@@ -10,16 +10,15 @@ import { TreeDataService } from '../tree-data.service';
 export class ClarityTreeComponent {
 
   data = this.service.getItems();
+  expand = false;
 
   constructor(private service: TreeDataService) {
-    console.log(this.service);
+    // setTimeout(() => {
+    //   this.expand = true;
+    // }, 5000);
   }
 
-  ngAfterContentInit() {
-    console.log('afterContentInit')
-  }
-
-  fetchChildren = (node: any): Observable<any[]> => this.service.getItems();
+  fetchChildren = (node: any): Observable<any[]> => this.service.getItems(node);
 
   hasChildren = (node: any): boolean => true;
 

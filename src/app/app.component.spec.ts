@@ -1,35 +1,46 @@
-import { TestBed, async } from '@angular/core/testing';
-import { RouterTestingModule } from '@angular/router/testing';
-import { AppComponent } from './app.component';
+let start;
+beforeEach(() => {
+  start = Date.now();
+});
 
-describe('AppComponent', () => {
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      imports: [
-        RouterTestingModule
-      ],
-      declarations: [
-        AppComponent
-      ],
-    }).compileComponents();
-  }));
+afterEach(() => {
+  const time = Date.now() - start;
+  console.log(`Test took: ${time}ms`);
+  results[results.length - 1].time = time;
+});
 
-  it('should create the app', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
-    expect(app).toBeTruthy();
+const results = [];
+afterAll(() => {
+  let output = `
+---------------------------------
+CSV
+---------------------------------
+
+`;
+  results.forEach(result => {
+    output += `${result.test},${result.count},${result.time}
+`;
   });
+  output += `
+---------------------------------
+>>> START JSON
 
-  it(`should have as title 'h5-tree-compare'`, () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
-    expect(app.title).toEqual('h5-tree-compare');
-  });
+${JSON.stringify(results, null, '\t')}
 
-  it('should render title', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('h5-tree-compare app is running!');
-  });
+>>> END JSON
+---------------------------------
+`;
+  console.log(output);
+});
+
+function inText(text, query) {
+  return (text.indexOf(query) > -1) ? true : false;
+}
+
+// Have it log each test name
+jasmine.getEnv().addReporter({
+  specStarted: function(result) {
+    console.log(result.fullName);
+    results.push({ test: result.fullName, type: (inText(result.fullName, 'Clarity') ? 'Clarity' : 'Kendo'), time: 0, expand: (result.fullName.indexOf('expand') > -1) ? true : false, count: Number.parseInt(result.fullName.split(' ')[1])});
+  }
 });
