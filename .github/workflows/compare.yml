@@ -12,6 +12,7 @@ jobs:
     - run: npm install
     - run: npm test -- --watch false > output.txt
     - run: npm run build
+    - run: cp dist/h5-tree-compare/index.html dist/h5-tree-compare/404.html
     - run: node parse-output
       env:
         CI: true
